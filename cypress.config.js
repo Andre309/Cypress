@@ -10,6 +10,7 @@ module.exports = defineConfig({
       USER_PASSWORD: "secret_sauce"
     },
     setupNodeEvents(on, config) {
+      require('cypress-mochawesome-reporter/plugin')(on);
       // implement node event listeners here
     },
   },
