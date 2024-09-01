@@ -2,7 +2,7 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "main", "cy_8", "master" ]
+    branches: [ "main", "cy_9", "master" ]
   pull_request:
     branches: [ "main" ]
 
@@ -10,9 +10,6 @@ jobs:
 
   cypress-run:
     runs-on: windows-latest
-    container:
-      image: cypress/browsers:latest
-      options: --user 1001
     steps:
       - name: Check out the code
         uses: actions/checkout@v4
